@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie Photo HD</title>
+    <style>
+        body {
+            background-color: #111;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        img {
+            max-width: 90%;
+            height: auto;
+            margin-top: 20px;
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+        img.zoomed {
+            transform: scale(2);
+            cursor: zoom-out;
+        }
+        h2 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Photo : ok ok 2.png</h2>
+    <img src="ok ok 2.png" alt="Photo" id="zoomable">
+    
+    <script>
+        const img = document.getElementById('zoomable');
+        img.addEventListener('click', () => {
+            img.classList.toggle('zoomed');
+        });
+    </script>
+</body>
+</html>
